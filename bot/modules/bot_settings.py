@@ -181,6 +181,10 @@ async def load_config():
     if len(LEECH_FILENAME_REMNAME) == 0:
         LEECH_FILENAME_REMNAME = ''
 
+    METADATA = environ.get('METADATA', 'Telegram ~ @TamillRockerznet')
+    if len(METADATA) == 0:
+        METADATA = 'Telegram ~ @TamillRockerznet'
+
     MIRROR_FILENAME_PREFIX = environ.get('MIRROR_FILENAME_PREFIX', '')
     if len(MIRROR_FILENAME_PREFIX) == 0:
         MIRROR_FILENAME_PREFIX = ''
